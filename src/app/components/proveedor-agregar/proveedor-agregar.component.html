@@ -1,0 +1,23 @@
+<h3>Categoria</h3>
+<button [routerLink]= "['/proveedor']" class="btn btn-outline-primary">Regresar</button>
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <form (ngSubmit) = "agregar()" #forma ="ngForm">
+            <div class="form-group">
+                <label for="descripcion">Nit</label>
+                <input [(ngModel)] = "proveedor.nit" required placeholder="Descripción" class="form-control" name="nit"  type="text">  
+                <label for="descripcion">Razon Social</label>
+                <input [(ngModel)] = "proveedor.razonSocial" required placeholder="Descripción" class="form-control" name="razonSocial"  type="text">           
+                <label for="descripcion">Pagina Web</label>
+                <input [(ngModel)] = "proveedor.paginaWeb" required placeholder="Descripción" class="form-control" name="paginaWeb"  type="text">           
+                <label for="descripcion">Contacto Principal</label>
+                <input [(ngModel)] = "proveedor.contactoPrincipal" required placeholder="Descripción" class="form-control" name="contactoPrincipal"  type="text">                         
+            </div>      
+            <div class="form-group">
+                <button [disabled] = "!forma.valid" type="submit" class="btn btn-outline-primary">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
+

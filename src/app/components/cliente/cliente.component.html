@@ -1,0 +1,29 @@
+<div class="container  m-5">
+    <button [routerLink]= "['/cliente-agregar']" class="btn btn-outline-primary">Agregar</button>
+    <br>
+    <br>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Codigo</th>
+                <th scope="col">Nit</th>
+                <th scope="col">Dpi</th>
+                <th scope="col">Nombre</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let cliente of clientes">
+            <tr>
+                <th scope="row">1</th>
+                <td>{{ cliente.codigocliente }}</td>
+                <td>{{ cliente.nit }}</td>
+                <td>{{ cliente.dpi }}</td>
+                <td>{{ cliente.nombre }}</td>
+                <td>
+                    <button class="btn btn-outline-danger">Eliminar</button>
+                    <button class="btn btn-outline-primary">Modificar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

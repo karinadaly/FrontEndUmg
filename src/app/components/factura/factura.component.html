@@ -1,0 +1,31 @@
+<div class="container  m-5">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Codigo</th>
+                <th scope="col">Numero Factura</th>
+                <th scope="col">Serie</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let factura of facturas">
+            <tr>
+                <th scope="row">1</th>
+                <td>{{ factura.codigoFactura }}</td>
+                <td>{{ factura.numeroFactura }}</td>
+                <td>{{ factura.serie }}</td>
+                <td>{{ factura.fechaFactura }}</td>
+                <td>{{ factura.cliente.nombre }}</td>
+                <td>{{ factura.total }}</td>
+
+                <td>
+                    <button class="btn btn-outline-danger">Eliminar</button>
+                    <button class="btn btn-outline-primary">Modificar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

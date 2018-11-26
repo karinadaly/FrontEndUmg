@@ -1,0 +1,23 @@
+<div class="container  m-5">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Codigo</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Opciones</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let tiporegistro of tiporegistros">
+            <tr>
+                <th scope="row">1</th>
+                <td>{{ tiporegistro.codigoTipoRegistro }}</td>
+                <td>{{ tiporegistro.descripcion }}</td>
+                <td>
+                    <button class="btn btn-outline-danger">Eliminar</button>
+                    <button class="btn btn-outline-primary">Modificar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
